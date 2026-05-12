@@ -1,8 +1,3 @@
-/* ===========================
-   CSS VARIABLES (Renkler)
-   =========================== */
-
-/* Default: DARK tema */
 :root {
   --bg: #0a0a0a;
   --surface: #161616;
@@ -12,7 +7,6 @@
   --accent: #5eead4;
 }
 
-/* LIGHT tema (body'ye .light class'i geldiginde aktif olur) */
 body.light {
   --bg: #fafaf9;
   --surface: #ffffff;
@@ -21,10 +15,6 @@ body.light {
   --text-soft: #525252;
   --accent: #0d9488;
 }
-
-/* ===========================
-   GENEL RESET
-   =========================== */
 
 * {
   margin: 0;
@@ -41,19 +31,11 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* ===========================
-   CONTAINER (Sayfa ortalama)
-   =========================== */
-
 .container {
   max-width: 720px;
   margin: 0 auto;
   padding: 80px 32px 60px;
 }
-
-/* ===========================
-   TEMA BUTONU
-   =========================== */
 
 .theme-btn {
   position: fixed;
@@ -75,14 +57,9 @@ body {
   color: var(--accent);
 }
 
-/* Dark modda gunes, light modda ay goster */
 .icon-light { display: none; }
 body.light .icon-dark { display: none; }
 body.light .icon-light { display: inline; }
-
-/* ===========================
-   HEADER
-   =========================== */
 
 .header {
   margin-bottom: 64px;
@@ -113,10 +90,6 @@ body.light .icon-light { display: inline; }
   max-width: 560px;
 }
 
-/* ===========================
-   SECTIONS
-   =========================== */
-
 .section {
   margin-bottom: 48px;
 }
@@ -132,10 +105,6 @@ body.light .icon-light { display: inline; }
   padding-bottom: 12px;
   border-bottom: 1px solid var(--border);
 }
-
-/* ===========================
-   ITEM (Education, Projects)
-   =========================== */
 
 .item {
   margin-bottom: 24px;
@@ -168,10 +137,6 @@ body.light .icon-light { display: inline; }
   color: var(--text-soft);
 }
 
-/* ===========================
-   TAG LIST (Skills, Interests)
-   =========================== */
-
 .tag-list {
   list-style: none;
   display: flex;
@@ -194,10 +159,6 @@ body.light .icon-light { display: inline; }
   color: var(--accent);
 }
 
-/* ===========================
-   LANGUAGE LIST
-   =========================== */
-
 .lang-list {
   list-style: none;
 }
@@ -218,10 +179,6 @@ body.light .icon-light { display: inline; }
   font-size: 13px;
   color: var(--text-soft);
 }
-
-/* ===========================
-   CONTACT LIST
-   =========================== */
 
 .contact-list {
   list-style: none;
@@ -254,10 +211,6 @@ body.light .icon-light { display: inline; }
   color: var(--accent);
 }
 
-/* ===========================
-   FOOTER
-   =========================== */
-
 .footer {
   margin-top: 80px;
   padding-top: 24px;
@@ -267,10 +220,6 @@ body.light .icon-light { display: inline; }
   font-size: 12px;
   color: var(--text-soft);
 }
-
-/* ===========================
-   MOBIL UYUMLULUK
-   =========================== */
 
 @media (max-width: 600px) {
   .container {
@@ -285,7 +234,7 @@ body.light .icon-light { display: inline; }
     font-size: 16px;
   }
 }
-/* Item icindeki linkler */
+
 .item .subtitle a {
   color: var(--accent);
   text-decoration: underline;
