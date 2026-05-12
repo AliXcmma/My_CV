@@ -1,0 +1,287 @@
+/* ===========================
+   CSS VARIABLES (Renkler)
+   =========================== */
+
+/* Default: DARK tema */
+:root {
+  --bg: #0a0a0a;
+  --surface: #161616;
+  --border: #262626;
+  --text: #e5e5e5;
+  --text-soft: #a1a1a1;
+  --accent: #5eead4;
+}
+
+/* LIGHT tema (body'ye .light class'i geldiginde aktif olur) */
+body.light {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --border: #e5e5e5;
+  --text: #1a1a1a;
+  --text-soft: #525252;
+  --accent: #0d9488;
+}
+
+/* ===========================
+   GENEL RESET
+   =========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.6;
+  /* Tema degisirken yumusak gecis */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* ===========================
+   CONTAINER (Sayfa ortalama)
+   =========================== */
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 32px 60px;
+}
+
+/* ===========================
+   TEMA BUTONU
+   =========================== */
+
+.theme-btn {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  background-color: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.theme-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Dark modda gunes, light modda ay goster */
+.icon-light { display: none; }
+body.light .icon-dark { display: none; }
+body.light .icon-light { display: inline; }
+
+/* ===========================
+   HEADER
+   =========================== */
+
+.header {
+  margin-bottom: 64px;
+}
+
+.tag {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--accent);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.name {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.intro {
+  color: var(--text-soft);
+  font-size: 17px;
+  max-width: 560px;
+}
+
+/* ===========================
+   SECTIONS
+   =========================== */
+
+.section {
+  margin-bottom: 48px;
+}
+
+.section-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-soft);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ===========================
+   ITEM (Education, Projects)
+   =========================== */
+
+.item {
+  margin-bottom: 24px;
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+.item h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.item .subtitle {
+  color: var(--accent);
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.item .date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--text-soft);
+  margin-bottom: 8px;
+}
+
+.item p {
+  color: var(--text-soft);
+}
+
+/* ===========================
+   TAG LIST (Skills, Interests)
+   =========================== */
+
+.tag-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-list li {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  transition: all 0.2s;
+}
+
+.tag-list li:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ===========================
+   LANGUAGE LIST
+   =========================== */
+
+.lang-list {
+  list-style: none;
+}
+
+.lang-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.lang-list li:last-child {
+  border-bottom: none;
+}
+
+.lang-list .level {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--text-soft);
+}
+
+/* ===========================
+   CONTACT LIST
+   =========================== */
+
+.contact-list {
+  list-style: none;
+}
+
+.contact-list li {
+  display: flex;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.contact-list li:last-child {
+  border-bottom: none;
+}
+
+.contact-list .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--text-soft);
+  width: 100px;
+}
+
+.contact-list a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-list a:hover {
+  color: var(--accent);
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+
+.footer {
+  margin-top: 80px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--text-soft);
+}
+
+/* ===========================
+   MOBIL UYUMLULUK
+   =========================== */
+
+@media (max-width: 600px) {
+  .container {
+    padding: 60px 20px 40px;
+  }
+
+  .name {
+    font-size: 36px;
+  }
+
+  .intro {
+    font-size: 16px;
+  }
+}
