@@ -285,3 +285,14 @@ body.light .icon-light { display: inline; }
     font-size: 16px;
   }
 }
+/* Item icindeki linkler */
+.item .subtitle a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+  transition: text-decoration-color 0.2s;
+}
+
+.item .subtitle a:hover {
+  text-decoration-color: var(--accent);
+}
